@@ -3,7 +3,7 @@ from flask import flask,jsonify,request
 import time
 
 app=flask(__name__)
-@app.route("/bot",method=["POST"])
+@app.route("/chatbot",method=["POST"])
 def response():
     query=dict(request.form)['query']
     result = query+" "+time.ctime
