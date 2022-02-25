@@ -1,3 +1,4 @@
+from concurrent.futures import process
 from flask import flask,jsonify,request
 import time
 
@@ -9,4 +10,4 @@ def response():
     return jsonify({"response":result})
 
 if __name__=="__main__":
-    app.run(host ="0.0.0.0")
+    app.run(host =process.env.PORT)
